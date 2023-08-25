@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pizza kadai</title>
+    <link rel="stylesheet" href="pizza-shop.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="pizza-shop.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="symbol">
+          <a href="#"><img src="images/logo.svg" height="40px" class="pizza-logo"/></a>
+          <div>
+            <a href="#">Pizza</a>
+            <a href="#">Kadai</a>
+          </div>
+        </div>
+        <div class="menu-buttons">
+          <div class="filter-icon">
+            <a href="#">
+              <ion-icon name="filter-outline" class="filter-btn"></ion-icon>
+              <ion-icon
+                name="filter-circle-outline"
+                class="filter-click"
+              ></ion-icon>
+            </a>
+          </div>
+          <div class="cart-icon">
+            <div class="cart-count">0</div>
+            <a href="#"><ion-icon name="cart-outline" class="cart-btn"></ion-icon></a>
+          </div>
+          <div class="contact-icon">
+            <a href="pizza-shop.html#footer"><ion-icon name="call-outline" class="contact-btn"></ion-icon></a>
+          </div>
+        </div>
+        <div class="back-icon off">
+          <a><ion-icon name="chevron-back-outline" class="back-btn"></ion-icon></a>
+        </div>
+        <div class="cart-menu">
+          <div class="cart-title">Cart Items</div>
+          <div class="cart-content">
+            <div class="no-cart-filter">
+              <ion-icon name="cart-outline" class="cart-btn"></ion-icon>
+              <span>Your Cart Is Empty</span>
+            </div>
+          </div>
+
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">Rs.0</div>
+          </div>
+          <button class="btn-buy">Place Order</button>
+          <ion-icon name="close" class="cart-close"></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <!-- ad section -->
+    <div class="all-content">
+      <section class="pizza-ad">
+        <div class="ad-detail">
+          <h2>Delicious Pizza's</h2>
+          <h3>hot 'n' stacked</h3>
+          <h4>starts at &#8377;119</h4>
+        </div>
+        <div class="ad-image">
+          <img src="images/large-pizza-ad.png" height="400px" />
+        </div>
+      </section>
+      <!-- menu section -->
+      <section class="pizza-container">
+        <h2 class="title">Discover The Best Pizzas</h2>
+        <div class="shop-content"></div>
+      </section>
+      <section class="veg-container">
+        <h2 class="title">Only Veggies</h2>
+        <div class="veg-content"></div>
+      </section>
+      <section class="drinks-container">
+        <h2 class="title">PK's Smoothies</h2>
+        <div class="drink-content"></div>
+      </section>
+      <section class="specials-container">
+        <h2 class="title">Specials</h2>
+        <div class="specials-content"></div>
+      </section>
+      <section class="combo-container">
+        <h2 class="title">Combo's</h2>
+        <div class="combo-content"></div>
+      </section>
+    </div>
+    <section class="filter-box off">
+      <div class="filter-buttons">
+        <div class="filter-items">
+          <a href="#" class="filters" data-filter="all">All items</a>
+          <a href="#" class="filters" data-filter="nv-pizza">non-veg</a>
+          <a href="#" class="filters" data-filter="v-pizza">veg </a>
+          <a href="#" class="filters" data-filter="drinks">smoothie</a>
+          <a href="#" class="filters" data-filter="specials">specials</a>
+          <a href="#" class="filters" data-filter="combos">combos</a>
+        </div>
+        <div class="filter-search">
+          <ion-icon name="search-outline" class="search-icon"></ion-icon>
+          <input type="text" placeholder="Search Food" id="search" />
+        </div>
+      </div>
+      <div class="filter-content">
+        <div class="no-result-filter off">
+          <ion-icon name="search-outline" class="nr-search-icon"></ion-icon>
+          <span>No Results Found</span>
+        </div>
+      </div>
+    </section>
+    <section class="receipt-box off">
+      <div  class="bill-box">
+      <table class="e-bill">
+         <tr class="table-head">
+          <th>Food Name</th>
+          <th>Food Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+         </tr>
+      </table>
+    <div class="all-total">
+    <div class="totalAmt">
+      <label for="sub-total-amt">Sub Total</label><div class="sub-total-amt"></div>
+      <label for="tax-amt">Tax 5%</label><div class="tax-amt"></div>
+    </div>
+    <div class="total-amt-box">
+      <label for="full-total">Total Amount</label><div class="full-total"></div>
+    </div>
+    </div>
+  </div> 
+      <div class="customer-detail">
+        <div class="add-info">
+        <label for="input-name" class="main-info">Name*</label>
+        <input type="text" id="input-name" placeholder="*name required"/></div>
+        <div class="add-info">
+        <label for="input-phone" class="main-info">Phone*</label>
+        <input type="text" id="input-phone" placeholder="*phone required"/></div>
+        <label for="" class="main-info">Address*</label>
+        <div class="add-info">
+        <label for="input-door" class="address">Door No.*</label>
+        <input type="text" id="input-door"/></div>
+        <div class="add-info">
+        <label for="input-street" class="address">Street*</label>
+        <input type="text" id="input-street"/></div>
+        <div class="add-info">
+        <label for="input-city" class="address">Town/City*</label>
+        <input type="text" id="input-city" value="Trichy" readonly/></div>
+        <div class="add-info">
+        <label for="input-state" class="address">State*</label>
+        <input type="text" id="input-state" value="Tamil Nadu" readonly/></div>
+        <div class="add-info">
+        <label for="input-pin" class="address">Pincode*</label>
+        <input type="text" id="input-pin"/></div>
+        <div class="cbtn-space"><button class="confirm-order">Confirm Order</button></div>
+      </div>
+    </section>
+
+    <section class="success-display off">
+      <div class="success-box">
+          <div class="success-mes">
+           <div><ion-icon name="cart-outline" class="cart-suc"></ion-icon><p>Your Order Is Confirmed</p></div>
+           <a class="refresh"><ion-icon name="arrow-back-outline"></ion-icon><p>back to home page</p></a>
+          </div>
+      </div>
+      </section>
+
+    <footer id="footer">
+      <div  class="footer-box">
+      <div class="symbol">
+        <a href="#"><img src="images/logo.svg" height="40px" class="pizza-logo"/></a>
+        <div>
+          <a href="#">Pizza</a>
+          <a href="#">Kadai</a>
+        </div>
+      </div>
+      <div class="footer-add">
+          <div class="footer-loc"><ion-icon name="home-outline"></ion-icon><p>pizza kadai,adrian complex,</p>
+           <p> near mancity bus stop,supernova street,</p>
+            <p>trichy-620001.</p>
+          </p></div>
+      </div>
+      <div class="footer-info">
+        <div><ion-icon name="call-outline" class="contact-btn"></ion-icon><span>+91 99PIZ-000ZA</span></div>
+        <div><ion-icon name="logo-instagram"></ion-icon><span>pizza_kadai</span></div>
+        <div><ion-icon name="logo-facebook"></ion-icon><span>pizzakadaifb</span></div>
+        <div><ion-icon name="logo-whatsapp"></ion-icon><span>+91 99PIZ-000ZA</span></div>
+      </div>
+    </div>    
+    </footer>
+  </body>
+</html>

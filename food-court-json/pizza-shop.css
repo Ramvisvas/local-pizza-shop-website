@@ -1,0 +1,768 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #fffee0;
+}
+/* header */
+header{
+    height: 70px;
+    width: 100vw;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 90;
+}
+header nav{
+    max-width: 1400px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.symbol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100px;
+}
+.symbol div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.symbol div a{
+    display: inline-block;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+}
+.menu-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 180px;
+}
+.menu-buttons.off{
+    opacity: 0;
+    pointer-events: none;
+}
+.cart-icon,.filter-icon,.contact-icon,.back-icon{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    position: relative; 
+}
+.cart-count{
+    position: absolute;
+    font-size: 9px;
+    left: 22px;
+    top: 6px;
+    background-color: black;
+    width: 11px;
+    height: 12px;
+    border-radius: 11px;
+    color: #fff;
+    opacity: 0.8;
+}
+.cart-icon a,.filter-icon a,.contact-icon a,.back-icon a{
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-icon a:hover ,.filter-icon a:hover,.contact-icon a:hover,.back-icon a:hover{
+    background-color: rgb(255, 219, 56);
+}
+.cart-icon a .cart-btn,
+.filter-icon a .filter-btn,
+.filter-icon a .filter-click,
+.contact-icon a .contact-btn,
+.back-icon a .back-btn{
+    font-size: 1.5rem;
+    color: black;
+    position: absolute;
+}
+.back-icon.off{
+    display: none;
+}
+/* cart menu css */
+.cart-menu{
+    position: fixed;
+    top: 0;
+    right: -150%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px #1b1b1b;
+    z-index: 150;
+    transition: 0.5s  ;
+}
+.cart-menu.active{
+    right: 0;
+    transition: 0.5s;
+}
+.cart-title{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #1b1b1b;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 12px;
+    background-color: rgb(255, 208, 0);
+}
+.cart-img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 5px;
+    margin: 8px;
+    background-color: #fff;
+}
+.cart-detail{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.cart-food-title{
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1b1b1b;
+}
+.cart-price-box{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+.cart-quantity{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    background-color: rgb(255, 233, 65);
+    color: #1b1b1b;
+}
+.cart-remove{
+    cursor: pointer;
+    color: #1b1b1b;
+    padding: 6px;
+    border-radius: 5px;
+}
+.cart-remove:hover{
+    color: #000;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: 0.5rem;
+}
+.btn-buy{
+    padding: 12px 20px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cart-close{
+   position: absolute;
+   top: 1rem;
+   right: 0.8rem;
+   font-size: 1.6rem;
+   cursor: pointer;
+   font-weight: 600;
+}
+.no-cart-filter.off{
+    font-family: 'caveat',sans-serif;
+    font-size: 24px;
+    width: 100%;
+    padding-left: 100px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    color: #cecece;
+    display: block;
+}
+.no-cart-filter{
+    display: none;
+}
+/* ad giant pizza */
+.all-content,.filter-box,.receipt-box{
+    display: block;
+}
+.all-content{
+    z-index: 99;
+}
+.filter-box{
+    z-index: 100;
+}
+.receipt-box{
+    z-index:150;
+}
+.all-content.off,
+.filter-box.off,.receipt-box.off{
+    display: none;
+}
+.filter-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 100;
+}
+.filter-icon.active a .filter-btn,
+.filter-icon a .filter-click{
+    display: none;
+}
+.filter-icon.active a .filter-click,
+.filter-icon a .filter-btn{
+    display: block;
+}
+.filter-buttons{
+    width: 100%;
+    height: 160px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    background-color:rgb(255, 191, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 1px 4px #cecece;  
+}
+.filter-items{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+.filters{
+    color: #000;
+    width: 120px;
+    height: 36px;
+    border: 3px solid #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    z-index: 80;
+}
+.filters:hover,
+.filters.active{
+    background-color: #000;
+    color: #fff;
+}
+.filter-search{
+    width: 700px;
+    position: relative;
+}
+.search-icon{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    font-size: 20px;
+}
+#search{
+    outline: none;
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 22px;
+    color: #1b1b1b;
+    padding-left: 64px;
+}
+.no-result-filter{
+    font-size: 40px;
+    font-family:'caveat',sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    width: 300px;
+    height: 100px;
+    left: 600px;
+    display: block;   
+}
+.no-result-filter.off{
+    display: none;
+}
+.nr-search-icon{
+    font-weight: 600;
+    font-size: 32px;
+}
+/* pizza ad css */
+.pizza-ad{
+    width: 100vw;
+    height: 500px;
+    background-color: rgb(255, 233, 65);
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;   
+}
+.pizza-ad .ad-detail{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    
+}
+.pizza-ad .ad-detail h2{
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 54px;
+   
+}
+.pizza-ad .ad-detail h3{
+    font-family: 'caveat',sans-serif;
+    font-size: 36px; 
+    padding-top: 18px;
+}
+.pizza-ad .ad-detail h4{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px; 
+    padding-top: 30px;
+}
+.ad-image{
+    width: 50%;
+}
+/* MENU SECTION */
+img{
+    width: 100%;
+}
+.pizza-container,
+.veg-container,
+.drinks-container,
+.specials-container,
+.combo-container{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+}
+h2.title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+.shop-content,
+.veg-content,
+.drink-content,
+.specials-content,
+.combo-content,
+.filter-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1.7rem;
+    justify-content: center;
+    align-content: center; 
+}
+.food-box{
+    background-color: rgb(255, 233, 65);
+    padding: 12px;
+    box-shadow: 0 6px 10px #cecece;
+    border-radius: 3px;
+    position: relative;
+    max-width: 360px;
+}
+.pic{
+    overflow: hidden;
+}
+.food-img{
+    object-fit: fill;
+    object-position: 30% 50%;
+    width: 315px;
+    height: 200px;  
+}
+.food-title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.food-price{
+    font-weight: 600;
+    color: #1b1b1b;
+}
+.add-cart-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(255, 208, 0); 
+    color: #1b1b1b;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.5s;
+}
+.add-cart-btn:hover{
+    color: #000;
+    background-color: rgb(255, 191, 0);  ;
+}
+/* receipt box css */
+.receipt-box{
+    margin: 90px auto;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1600px;
+    align-items: center;
+}
+.bill-box{
+    width: 100%;
+    height: 100%;
+    margin: 30px;
+    padding: 30px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #000}
+
+th {
+  background-color: rgb(255, 208, 0);
+  color: #000;
+}
+
+.customer-detail{
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(255, 191, 0);
+    margin: 10px;
+    padding: 30px;
+    border-radius: 10px;
+}
+label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    color: #000;
+    font-weight: 600;
+}
+.main-info{
+    font-size: 18px;
+    padding: 8px 0;
+    width: 120px;
+}
+.customer-detail input{
+    outline: none;
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 22px;
+    color: #1b1b1b;
+    padding-left: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+.cbtn-space{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.all-total{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.confirm-order{
+    margin-top: 16px;
+    padding: 12px 20px;
+    width: 180px;
+    background-color: #1b1b1b;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;   
+}
+.address{
+    width: 180px;
+}
+.add-info{
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+/* footer css */
+footer{
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    background-color: rgb(255, 233, 65);
+    bottom: 0;
+}
+.footer-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 3rem;
+    justify-content: center;
+    align-content: center; 
+}
+.footer-box .symbol{
+   margin: 0 30px;
+}
+.footer-add{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+.footer-info{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;   
+}
+.footer-info div{
+    width: 100%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+}
+.footer-info div span{
+    padding-left: 20px;
+} 
+.success-display.off{
+    display: none;
+}
+.success-display{
+    display: block;
+}
+.success-box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 233, 65);
+}
+.success-mes div p{
+   font-size: 28px; 
+   font-family: 'caveat',sans-serif;
+}
+.success-mes div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.success-mes div .cart-suc{
+    font-size: 28px;
+}
+.success-mes a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.success-mes a p{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.success-mes a p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* mobile version */
+@media(max-width:1374px){
+/* pizza  ad mobile */
+.pizza-ad{
+  width: 100%;
+}
+.pizza-ad .ad-detail{
+  width: fit-content;
+  height: fit-content;
+}
+.pizza-ad .ad-detail h2{
+  font-size: 44px;
+}
+.pizza-ad .ad-detail h3{
+  font-size: 28px;
+}
+.pizza-ad .ad-detail h4{
+  font-size: 22px;
+}
+.ad-image{
+  height: 320px;
+}
+/* menu css mobile */
+header{
+    width: 100%;
+}
+
+}
+@media(max-width:888px){
+    .filter-buttons{
+        width: 100%; 
+    }
+    .filter-items{
+        width: 80%;
+    }
+    .filters{
+        width: 90px;
+        height: 32px;
+        font-size: 11px;
+    }
+   .footer-box .symbol{
+    display: none;
+   }
+}
+@media(max-width:674px){
+    .pizza-ad .ad-detail h2{
+        font-size: 32px;
+      }
+      .pizza-ad .ad-detail h3{
+        font-size: 24px;
+      }
+      .pizza-ad .ad-detail h4{
+        font-size: 20px;
+      }
+      .filter-buttons{
+        width: 100%; 
+    } 
+    .filter-items{
+        width: 80%;
+    }
+    .filters{
+        width: 72px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .filter-search{
+        width: 80%;
+    }
+    .customer-detail{
+        width: 100%;
+        height: 400px;
+        margin: 6px;
+        padding: 22px;
+    }
+    .bill-box{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+@media(max-width:494px){
+     .pizza-ad{
+        flex-direction: column;
+     }
+     .ad-image{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .ad-image img{
+        height: 180px;
+        width: 360px;
+        padding-top: 10px;
+     }
+    .cart-menu{
+        width: 360px;
+    }
+    .filter-buttons{
+        height: 240px;
+        width: 100%; 
+    }
+    .filter-items{
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    .filters{
+        font-size: 8px;
+        width: 60px;
+        height: 28px;
+    }
+    .filter-search{
+        width: 80%;
+    }
+    .symbol div a{
+        font-size: 12px;
+    }
+    .pizza-logo{
+        height: 16px;
+    }
+    .menu-buttons{
+        padding-right: 18px;
+    } 
+}

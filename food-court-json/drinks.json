@@ -1,0 +1,50 @@
+[
+    {
+        "image": "images/chocolate-smoothie.jpg",
+        "food_name" : "chocolate smoothie",
+        "food_price": "Rs.99",
+        "id" : "d-001" 
+    },
+
+    {
+        "image": "images/strawberry-smoothie.jpg",
+        "food_name" : "strawberry smoothie",
+        "food_price": "Rs.99",
+        "id" : "d-001"  
+    },
+
+    {
+        "image": "images/vanilla-smoothie.webp",
+        "food_name" : "vanilla smoothie",
+        "food_price": "Rs.99" ,
+        "id" : "d-001" 
+    },
+
+    {
+        "image": "images/fruits-smoothie.jpg",
+        "food_name" : "mixed fruits smoothie",
+        "food_price": "Rs.109",
+        "id" : "d-001" 
+    },
+
+    {
+        "image": "images/nuts-smoothie.jpg",
+        "food_name" : "nuts&fruits smoothie",
+        "food_price": "Rs.109" ,
+        "id" : "d-001" 
+    },  
+
+    {
+        "image": "images/coffee-smoothie.jpg",
+        "food_name" : "coffee smoothie",
+        "food_price": "Rs.109", 
+        "id" : "d-001" 
+    },
+
+    {
+        "image": "images/special-smoothie.jpg",
+        "food_name" : "pk's special smoothie",
+        "food_price": "Rs.119" ,
+        "id" : "d-001" 
+    } 
+]  

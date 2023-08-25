@@ -1,0 +1,80 @@
+[
+    {
+        "image": "images/chocolate-lava-cake.jpg",
+        "food_name" : "chocolate lava cake",
+        "food_price": "Rs.79" ,
+        "id" : "s-001"
+    },
+
+    {
+        "image": "images/pudding-cake.jpg",
+        "food_name" : "pudding cake",
+        "food_price": "Rs.79" ,
+        "id" : "s-002"
+    },
+
+    {
+        "image": "images/chocolate-ic-cake.webp",
+        "food_name" : "chocolate ice cake",
+        "food_price": "Rs.79" ,
+        "id" : "s-003"
+    },
+
+    {
+        "image": "images/strawberry-ic-cake.jpg",
+        "food_name" : "strawberry ice cake",
+        "food_price": "Rs.79", 
+        "id" : "s-004"
+    },
+
+    {
+        "image": "images/vanilla-ic-cake.jpg",
+        "food_name" : "vanilla ice cake",
+        "food_price": "Rs.79" ,
+        "id" : "s-005"
+    },
+
+    {
+        "image": "images/rainbow-popsicle.jpg",
+        "food_name" : "rainbow popsicle",
+        "food_price": "Rs.99" ,
+        "id" : "s-006"
+    },
+    
+    {
+        "image": "images/popsicle.jpg",
+        "food_name" : "pk's special popsicle",
+        "food_price": "Rs.99", 
+        "id" : "s-007"
+    },
+    
+    {
+        "image": "images/chocolate-shake.webp",
+        "food_name" : "chocolate shake",
+        "food_price": "Rs.99" ,
+        "id" : "s-008"
+    },
+    
+    
+    {
+        "image": "images/strawberry-shake.webp",
+        "food_name" : "strawberry shake",
+        "food_price": "Rs.99" ,
+        "id" : "s-009"
+    },
+    
+    {
+        "image": "images/vanilla-shake.webp",
+        "food_name" : "vanilla shake",
+        "food_price": "Rs.99" ,
+        "id" : "s-010"
+    },
+
+    {
+        "image": "images/special-shake.webp",
+        "food_name" : "pk's special shake",
+        "food_price": "Rs.109" ,
+        "id" : "s-011"
+    }
+
+]  

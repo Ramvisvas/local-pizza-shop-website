@@ -1,0 +1,57 @@
+[
+    {
+        "image": "images/special-chicken-pizza.jpg",
+        "food_name" : "special chicken pizza",
+        "food_price": "Rs.349",
+        "id": "nv-001" 
+    },
+
+    {
+        "image": "images/chicken-tikka-pizza.jpg",
+        "food_name" : "chicken tikka pizza",
+        "food_price": "Rs.299",
+        "id": "nv-002"  
+    },
+
+    {
+        "image": "images/chicken-bbq-pizza.jpg",
+        "food_name" : "chicken bbq pizza",
+        "food_price": "Rs.299",
+        "id": "nv-003"  
+    },
+
+    {
+        "image": "images/chicken-tandoori-pizza.jpeg",
+        "food_name" : "chicken tandoori pizza",
+        "food_price": "Rs.299",
+        "id": "nv-004" 
+    },
+
+    {
+        "image": "images/chilly-chicken-pizza.png",
+        "food_name" : "chilly chicken pizza",
+        "food_price": "Rs.299",
+        "id": "nv-005" 
+    },
+
+    {
+        "image": "images/chicken-cheese-pizza.jpg",
+        "food_name" : "chicken cheese pizza",
+        "food_price": "Rs.199",
+        "id": "nv-006"  
+    },
+
+    {
+        "image": "images/butter-chicken-pizza.jpg",
+        "food_name" : "butter chicken pizza",
+        "food_price": "Rs.199",
+        "id": "nv-007"  
+    },
+
+    {
+        "image": "images/chicken-pizza-regular.webp",
+        "food_name" : "chicken pizza regular",
+        "food_price": "Rs.149",
+        "id": "nv-008"  
+    }
+]

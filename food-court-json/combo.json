@@ -1,0 +1,23 @@
+[
+    {
+        "image": "images/mini-combo.jpg",
+        "food_name" : "mini combo (1 coke, 1 medium pizza & 1p small fries )",
+        "food_price": "Rs.399",
+        "id": "c-001" 
+    },
+
+    {
+        "image": "images/super-combo.webp",
+        "food_name" : "super combo (1 pepsi, 2 medium pizzas & 1p potato fries )",
+        "food_price": "Rs.649",
+        "id": "c-002"  
+    },
+
+    {
+        "image": "images/giant-combo.avif",
+        "food_name" : "giant combo (2 coke, 2 large pizzas & 2 garlic breads )",
+        "food_price": "Rs.799" ,
+        "id": "c-003" 
+    }
+    
+]  

@@ -1,0 +1,44 @@
+[
+    {
+        "image": "images/special-veg-pizza.webp",
+        "food_name" : "special veg pizza",
+        "food_price": "Rs.149",
+        "id": "vp-001"
+    },
+
+    {
+        "image": "images/cheese-pizza.webp",
+        "food_name" : "cheese pizza",
+        "food_price": "Rs.119",
+        "id": "vp-002" 
+    },
+
+    {
+        "image": "images/panner-tikka-pizza.webp",
+        "food_name" : "panner tikka pizza",
+        "food_price": "Rs.119",
+        "id": "vp-003" 
+    },
+
+    {
+        "image": "images/mushroom-pizza.webp",
+        "food_name" : "mushroom pizza",
+        "food_price": "Rs.119",
+        "id": "vp-004" 
+    },
+
+    {
+        "image": "images/garlic-cheese-pizza.jpg",
+        "food_name" : "garlic cheese pizza",
+        "food_price": "Rs.119",
+        "id": "vp-005" 
+    },
+    
+    {
+        "image": "images/veg-pizza.jpg",
+        "food_name" : "veg pizza regular",
+        "food_price": "Rs.119",
+        "id": "vp-006" 
+    }
+    
+]  
